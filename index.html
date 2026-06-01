@@ -341,12 +341,13 @@
 
     .partner-content{
       display:flex;
-      gap:180px;
+      gap:80px;
       align-items:flex-start;
     }
 
     .partner-text{
-      flex:0 0 25%;
+      flex:0 0 30%;
+      min-width:250px;
     }
 
     .partner-label{
@@ -392,6 +393,7 @@
       display:flex;
       justify-content:center;
       align-items:center;
+      min-width:0;
     }
 
     .partner-blob{
@@ -410,11 +412,12 @@
       grid-template-columns:repeat(2, 1fr);
       gap:30px;
       width:100%;
+      max-width:1000px;
     }
 
     .stat-card{
-      width: 400px;
-      height: 219px;
+      width:100%;
+      min-height:219px;
       background:rgba(95,124,255,0.08);
       border:1px solid rgba(122,144,255,0.20);
       border-radius:14px;
@@ -535,8 +538,22 @@
         gap:40px;
       }
 
+      .partner-text{
+        flex:0 0 100%;
+      }
+
+      .partner-visual{
+        flex:0 0 100%;
+      }
+
       .stats-grid{
         max-width:100%;
+        gap:25px;
+      }
+
+      .stat-card{
+        padding:35px;
+        min-height:200px;
       }
 
       .partner-heading,
@@ -546,25 +563,86 @@
     }
 
     @media(max-width:768px){
+      .partner-section{
+        padding:60px 0;
+      }
+
       .stats-grid{
         grid-template-columns:1fr;
         gap:20px;
       }
 
       .stat-card{
-        padding:30px;
+        padding:25px;
+        min-height:auto;
       }
 
       .stat-number{
-        font-size:36px;
+        font-size:28px;
       }
 
-      .stat-card h3{
-        font-size:18px;
+      .stat-card h5{
+        font-size:14px;
+        margin-top:25px;
       }
 
       .stat-card p{
         font-size:13px;
+        line-height:1.5;
+      }
+
+      .stat-label{
+        font-size:11px;
+      }
+
+      .partner-heading,
+      .about-heading{
+        font-size:28px;
+      }
+
+      .partner-text p,
+      .about-text p{
+        font-size:14px;
+      }
+    }
+
+    @media(max-width:480px){
+      .partner-section{
+        padding:40px 0;
+      }
+
+      .stats-grid{
+        gap:15px;
+      }
+
+      .stat-card{
+        padding:20px;
+      }
+
+      .stat-icon{
+        font-size:20px;
+      }
+
+      .stat-number{
+        font-size:24px;
+      }
+
+      .stat-card h5{
+        font-size:12px;
+        margin-top:15px;
+      }
+
+      .stat-card p{
+        font-size:12px;
+      }
+
+      .partner-heading,
+      .about-heading{
+        font-size:24px;
+      }
+
+      .container{
+        width:95%;
       }
     }
 
